@@ -123,7 +123,7 @@ function idiomaIngles(){
    phone.textContent="Phone";
    subtitulosForm.textContent="Send us a message";
    interesEn.textContent="What service are you interested in?";
-   btnEnviar.textContent='Send';
+   btnEnviar.innerHTML='<img class="btn__Form-enviar" src="../imagenes/mensaje.gif" alt="" >Send';
    textoArea.placeholder="Message";
   idiomaOpcionesEn()
   holder()
@@ -137,7 +137,7 @@ function idiomaeEuskera() {
     phone.textContent = "Tel. Zenbakia";
     subtitulosForm.textContent = "Bidaliguzu mezu bat";
     interesEn.textContent = "Zein zerbitzuan interesa duzu?";
-    btnEnviar.textContent = 'Bidali';
+    btnEnviar.innerHTML='<img class="btn__Form-enviar" src="../imagenes/mensaje.gif" alt="" >Bidali';
     idiomaOpcionesEu()
 }
 

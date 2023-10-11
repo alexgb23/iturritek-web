@@ -9,6 +9,8 @@ let btnEnviar=document.querySelector("#btn-Form");
 let phone=document.querySelector(".phone");
 let opcionesSelect=document.querySelectorAll(".opciones");
 let mail=document.querySelector(".mail");
+let textoArea=document.getElementById("mensaje");
+let inputPlaceHolder=document.querySelectorAll(".input-deco");
 let espanol=document.querySelector(".es");
 let ingles=document.querySelector(".en");
 let euskera=document.querySelector(".eu");
@@ -34,6 +36,12 @@ const encabezadoNav={
   
 } 
 
+const inpPlacHoldEn=[
+    "Name *","SurName *","Phone *","Email *"
+]
+const inpPlacHoldEu=[
+    "Name *","SurName *","Phone *","Email *"
+]
 const options=[
 "Air Conditioning",
 "Plumbing",
@@ -107,11 +115,18 @@ function idiomaIngles(){
    subtitulosForm.textContent="Send us a message";
    interesEn.textContent="What service are you interested in?";
    btnEnviar.textContent='Send';
+   textoArea.placeholder="Message";
   idiomaOpciones()
+  holder()
 }
 
 function idiomaOpciones(){
     for(let i=0;i<options.length;i++){
         opcionesSelect[i].textContent=options[i];
+    }
+}
+function holder(){
+    for(let i=0;i<inpPlacHoldEn.length;i++){
+        inputPlaceHolder[i].placeholder=inpPlacHoldEn[i];
     }
 }

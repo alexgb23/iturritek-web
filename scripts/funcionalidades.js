@@ -31,10 +31,6 @@ btncontacto.addEventListener('click', () => {
 })
 
 
-if(document.title === 'Iturritek-Contacto-Formulario'){
-    document.querySelector(".cont-menu").style.gap="48%";
-}
-
 if(logoFter)
 logoFter.addEventListener('click', () => {
     location.href = '../index.html'

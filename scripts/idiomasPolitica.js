@@ -8,11 +8,35 @@ let titGenPolitica=document.querySelector('.titu-politicas');
 let titularesPolitic=document.querySelectorAll('.titulos-politicas');
 let subPolitica=document.querySelectorAll('.subtitulos-politicas');
 let textoPolitica=document.querySelectorAll('.politic__text');
+let vinculosHeader=document.querySelectorAll(".linkscript");
 let espanol=document.querySelector(".es");
 let ingles=document.querySelector(".en");
 let euskera=document.querySelector(".eu");
 
+const encabezadoNav={
 
+    link1:{
+        en:"HOME",
+        eu:"INICIO",
+    },
+    link2:{
+        en:"ABOUT US",
+        eu:"GUTAZ",
+    },
+    link3:{
+        en:"SERVICES",
+        eu:"ZERBITZUAK",
+    },
+    link4:{
+        en:"PEÑASCAL GROUP",
+        eu:"PEÑASCAL TALDEA",
+    },
+    link5:{
+        en:"CONTACT US",
+        eu: "KONTAKTUA",
+    }
+  
+} 
 
 addEventListener("load", ()=> {
     espanol.style.backgroundColor="rgb(131, 190, 224)";
@@ -183,7 +207,7 @@ idiomas.forEach((idioma)=>{
            titGenAviso.textContent=titlebtnAviso[0];
            titGenPolitica.textContent=titlebtnPolitica[0];
            rellenarTextoALegalEn()
-
+            headerEn()
            titularesAvisosAvisoEn()
            titularesPEn()
             subPoliticaEn()
@@ -201,7 +225,7 @@ idiomas.forEach((idioma)=>{
             titGenAviso.textContent=titlebtnAviso[1];
             titGenPolitica.textContent=titlebtnPolitica[1];
             rellenarTextoALegalEu()
-
+            headerEu()      
             titularesAvisosAvisoEu()
             titularesPEu()
             subPoliticaEu()
@@ -215,6 +239,29 @@ idiomas.forEach((idioma)=>{
    
 })
 
+
+/////////////////////////////
+
+
+function headerEn(){
+    for (let i=0;i<vinculosHeader.length;i++){
+        vinculosHeader[0].textContent=encabezadoNav.link1.en
+        vinculosHeader[1].textContent=encabezadoNav.link2.en
+        vinculosHeader[2].textContent=encabezadoNav.link3.en
+        vinculosHeader[3].textContent=encabezadoNav.link4.en
+        vinculosHeader[4].textContent=encabezadoNav.link5.en
+     }
+}
+
+function headerEu(){
+    for (let i=0;i<vinculosHeader.length;i++){
+        vinculosHeader[0].textContent=encabezadoNav.link1.eu
+        vinculosHeader[1].textContent=encabezadoNav.link2.eu
+        vinculosHeader[2].textContent=encabezadoNav.link3.eu
+        vinculosHeader[3].textContent=encabezadoNav.link4.eu
+        vinculosHeader[4].textContent=encabezadoNav.link5.eu
+     }
+}
 
 /////////////////////////funciones de traduccion de Avisos////////////////////////
 
@@ -275,3 +322,6 @@ function rellenarTextoPoliticaEu(){
         textoPolitica[i].textContent=politicTextAEu[i];
     }
 }
+
+
+

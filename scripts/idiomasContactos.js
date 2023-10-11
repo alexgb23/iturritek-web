@@ -1,5 +1,11 @@
 let idiomas=document.querySelectorAll(".nav-link");
 let vinculosHeader=document.querySelectorAll(".linkscript");
+let tituloGral=document.querySelector(".contact-title");
+let subtitulosContact=document.querySelector(".titulos-card_contacto");
+let pararafo=document.querySelector(".contact-paragraph");
+let subtitulosForm=document.querySelector(".titulos-card_contacto");
+let phone=document.querySelector(".phone");
+let mail=document.querySelector(".mail");
 let espanol=document.querySelector(".es");
 let ingles=document.querySelector(".en");
 let euskera=document.querySelector(".eu");
@@ -36,10 +42,8 @@ idiomas.forEach((idioma)=>{
             espanol.style.backgroundColor="transparent";
             euskera.style.backgroundColor="transparent";
             idioma.style.backgroundColor="rgb(131, 190, 224)"
-
-
             headerEn()
-        
+            idiomaIngles()
           
           
         }
@@ -54,7 +58,7 @@ idiomas.forEach((idioma)=>{
 
     
         }
-        
+
         else if(idioma.classList.contains("es")){
             location.reload()
         }
@@ -78,4 +82,13 @@ function headerEu(){
         vinculosHeader[2].textContent=encabezadoNav.link3.eu
         vinculosHeader[3].textContent=encabezadoNav.link4.eu
      }
+}
+
+
+function idiomaIngles(){
+   tituloGral.textContent=" ¿WANT TO TALK?";
+   subtitulosContact.textContent="Contact details";
+   pararafo.textContent="Belategi, 1 48002 BILBO.";
+   phone.textContent="Phone";
+   subtitulosForm.textContent="Send us a message";
 }

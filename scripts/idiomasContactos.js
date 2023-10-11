@@ -4,7 +4,10 @@ let tituloGral=document.querySelector(".contact-title");
 let subtitulosContact=document.querySelector(".titulos-card_contacto");
 let pararafo=document.querySelector(".contact-paragraph");
 let subtitulosForm=document.querySelector(".titulos-card_contacto");
+let interesEn=document.querySelector(".servicio-interés");
+let btnEnviar=document.querySelector("#btn-Form");
 let phone=document.querySelector(".phone");
+let opcionesSelect=document.querySelectorAll(".opciones");
 let mail=document.querySelector(".mail");
 let espanol=document.querySelector(".es");
 let ingles=document.querySelector(".en");
@@ -30,6 +33,17 @@ const encabezadoNav={
     },
   
 } 
+
+const options=[
+"Air Conditioning",
+"Plumbing",
+"Heating and gas",
+"Reform",
+"Assembly",
+"Maintenance"
+]
+    
+
 
 addEventListener("load", ()=> {
     espanol.style.backgroundColor="rgb(131, 190, 224)";
@@ -91,4 +105,13 @@ function idiomaIngles(){
    pararafo.textContent="Belategi, 1 48002 BILBO.";
    phone.textContent="Phone";
    subtitulosForm.textContent="Send us a message";
+   interesEn.textContent="What service are you interested in?";
+   btnEnviar.textContent='Send';
+  idiomaOpciones()
+}
+
+function idiomaOpciones(){
+    for(let i=0;i<options.length;i++){
+        opcionesSelect[i].textContent=options[i];
+    }
 }

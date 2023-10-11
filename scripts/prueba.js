@@ -13,6 +13,12 @@ let ingles=document.querySelector(".en");
 let euskera=document.querySelector(".eu");
 
 
+
+addEventListener("load", ()=> {
+    espanol.style.backgroundColor="rgb(131, 190, 224)";
+})
+
+
 const titlebtnAviso= ["Legal warning", "Legeen abisua"]
 const titlebtnPolitica= ["Policies and privacy","Politikak eta pribatutasuna"]
 

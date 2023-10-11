@@ -115,18 +115,17 @@ function headerEu() {
     }
 }
 
-
-function idiomaIngles() {
-    tituloGral.textContent = " ¿WANT TO TALK?";
-    subtitulosContact.textContent = "Contact details";
-    pararafo.textContent = "Belategi, 1 48002 BILBO.";
-    phone.textContent = "Phone";
-    subtitulosForm.textContent = "Send us a message";
-    interesEn.textContent = "What service are you interested in?";
-    btnEnviar.textContent = 'Send';
-    textoArea.placeholder = "Tell us";
-    idiomaOpcionesEn()
-    holder()
+function idiomaIngles(){
+   tituloGral.textContent=" ¿WANT TO TALK?";
+   subtitulosContact.textContent="Contact details";
+   pararafo.textContent="Belategi, 1 48002 BILBO.";
+   phone.textContent="Phone";
+   subtitulosForm.textContent="Send us a message";
+   interesEn.textContent="What service are you interested in?";
+   btnEnviar.innerHTML='<img class="btn__Form-enviar" src="../imagenes/mensaje.gif" alt="" >Send';
+   textoArea.placeholder="Tell us";
+  idiomaOpcionesEn()
+  holder()
 }
 
 
@@ -139,6 +138,7 @@ function idiomaeEuskera() {
     interesEn.textContent = "Zein zerbitzuan interesa duzu?";
     btnEnviar.textContent = 'Bidali';
     textoArea.placeholder = "Esaiguzu";
+    btnEnviar.innerHTML='<img class="btn__Form-enviar" src="../imagenes/mensaje.gif" alt="" >Bidali';
     idiomaOpcionesEu()
     holderEu();
 }

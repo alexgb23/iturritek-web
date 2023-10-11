@@ -1,117 +1,143 @@
-let idiomas=document.querySelectorAll(".nav-link");
-let vinculosHeader=document.querySelectorAll(".linkscript");
-let tituloGral=document.querySelector(".contact-title");
-let subtitulosContact=document.querySelector(".titulos-card_contacto");
-let pararafo=document.querySelector(".contact-paragraph");
-let subtitulosForm=document.querySelector(".titulos-card_contacto");
-let interesEn=document.querySelector(".servicio-interés");
-let btnEnviar=document.querySelector("#btn-Form");
-let phone=document.querySelector(".phone");
-let opcionesSelect=document.querySelectorAll(".opciones");
-let mail=document.querySelector(".mail");
-let espanol=document.querySelector(".es");
-let ingles=document.querySelector(".en");
-let euskera=document.querySelector(".eu");
+let idiomas = document.querySelectorAll(".nav-link");
+let vinculosHeader = document.querySelectorAll(".linkscript");
+let tituloGral = document.querySelector(".contact-title");
+let subtitulosContact = document.querySelector(".titulos-card_contacto");
+let pararafo = document.querySelector(".contact-paragraph");
+let subtitulosForm = document.querySelector(".title-card_mensaje");
+let interesEn = document.querySelector(".servicio-interés");
+let btnEnviar = document.querySelector("#btn-Form");
+let phone = document.querySelector(".phone");
+let opcionesSelect = document.querySelectorAll(".opciones");
+let mail = document.querySelector(".mail");
+let espanol = document.querySelector(".es");
+let ingles = document.querySelector(".en");
+let euskera = document.querySelector(".eu");
 
-const encabezadoNav={
+const encabezadoNav = {
 
-    link1:{
-        en:"HOME",
-        eu:"INICIO",
+    link1: {
+        en: "HOME",
+        eu: "HASIERA",
     },
-    link2:{
-        en:"ABOUT US",
-        eu:"GUTAZ",
+    link2: {
+        en: "ABOUT US",
+        eu: "GUTAZ",
     },
-    link3:{
-        en:"SERVICES",
-        eu:"ZERBITZUAK",
+    link3: {
+        en: "SERVICES",
+        eu: "ZERBITZUAK",
     },
-    link4:{
-        en:"PEÑASCAL GROUP",
-        eu:"PEÑASCAL TALDEA",
+    link4: {
+        en: "PEÑASCAL GROUP",
+        eu: "PEÑASCAL TALDEA",
     },
-  
-} 
 
-const options=[
-"Air Conditioning",
-"Plumbing",
-"Heating and gas",
-"Reform",
-"Assembly",
-"Maintenance"
+}
+
+const optionsEn = [
+    "Air Conditioning",
+    "Plumbing",
+    "Heating and gas",
+    "Reform",
+    "Assembly",
+    "Maintenance"
 ]
-    
+
+const optionsEu = [
+    "Aire girotua",
+    "Iturgintza",
+    "Berogailua eta gasa",
+    "Berrriztatze",
+    "Muntaia",
+    "Kontaiguzu"
+]
 
 
-addEventListener("load", ()=> {
-    espanol.style.backgroundColor="rgb(131, 190, 224)";
+addEventListener("load", () => {
+    espanol.style.backgroundColor = "rgb(131, 190, 224)";
 })
 
 
-idiomas.forEach((idioma)=>{
-    idioma.addEventListener("click",()=>{
-        if(idioma.classList.contains("en")){
-            espanol.style.backgroundColor="transparent";
-            euskera.style.backgroundColor="transparent";
-            idioma.style.backgroundColor="rgb(131, 190, 224)"
+idiomas.forEach((idioma) => {
+    idioma.addEventListener("click", () => {
+        if (idioma.classList.contains("en")) {
+            espanol.style.backgroundColor = "transparent";
+            euskera.style.backgroundColor = "transparent";
+            idioma.style.backgroundColor = "rgb(131, 190, 224)"
             headerEn()
             idiomaIngles()
-          
-          
+
+
         }
 
-        else if(idioma.classList.contains("eu")){
-            espanol.style.backgroundColor="transparent";
-            ingles.style.backgroundColor="transparent";
-            idioma.style.backgroundColor="rgb(131, 190, 224)"
-          
+        else if (idioma.classList.contains("eu")) {
+            espanol.style.backgroundColor = "transparent";
+            ingles.style.backgroundColor = "transparent";
+            idioma.style.backgroundColor = "rgb(131, 190, 224)"
+
             headerEu()
-         
+            idiomaeEuskera()
 
-    
         }
 
-        else if(idioma.classList.contains("es")){
+        else if (idioma.classList.contains("es")) {
             location.reload()
         }
     })
-   
+
 })
 
-function headerEn(){
-    for (let i=0;i<vinculosHeader.length;i++){
-        vinculosHeader[0].textContent=encabezadoNav.link1.en
-        vinculosHeader[1].textContent=encabezadoNav.link2.en
-        vinculosHeader[2].textContent=encabezadoNav.link3.en
-        vinculosHeader[3].textContent=encabezadoNav.link4.en
-     }
+function headerEn() {
+    for (let i = 0; i < vinculosHeader.length; i++) {
+        vinculosHeader[0].textContent = encabezadoNav.link1.en
+        vinculosHeader[1].textContent = encabezadoNav.link2.en
+        vinculosHeader[2].textContent = encabezadoNav.link3.en
+        vinculosHeader[3].textContent = encabezadoNav.link4.en
+    }
 }
 
-function headerEu(){
-    for (let i=0;i<vinculosHeader.length;i++){
-        vinculosHeader[0].textContent=encabezadoNav.link1.eu
-        vinculosHeader[1].textContent=encabezadoNav.link2.eu
-        vinculosHeader[2].textContent=encabezadoNav.link3.eu
-        vinculosHeader[3].textContent=encabezadoNav.link4.eu
-     }
+function headerEu() {
+    for (let i = 0; i < vinculosHeader.length; i++) {
+        vinculosHeader[0].textContent = encabezadoNav.link1.eu
+        vinculosHeader[1].textContent = encabezadoNav.link2.eu
+        vinculosHeader[2].textContent = encabezadoNav.link3.eu
+        vinculosHeader[3].textContent = encabezadoNav.link4.eu
+    }
 }
 
 
-function idiomaIngles(){
-   tituloGral.textContent=" ¿WANT TO TALK?";
-   subtitulosContact.textContent="Contact details";
-   pararafo.textContent="Belategi, 1 48002 BILBO.";
-   phone.textContent="Phone";
-   subtitulosForm.textContent="Send us a message";
-   interesEn.textContent="What service are you interested in?";
-   btnEnviar.textContent='Send';
-  idiomaOpciones()
+function idiomaIngles() {
+    tituloGral.textContent = " ¿WANT TO TALK?";
+    subtitulosContact.textContent = "Contact details";
+    pararafo.textContent = "Belategi, 1 48002 BILBO.";
+    phone.textContent = "Phone";
+    subtitulosForm.textContent = "Send us a message";
+    interesEn.textContent = "What service are you interested in?";
+    btnEnviar.textContent = 'Send';
+    idiomaOpcionesEn()
 }
 
-function idiomaOpciones(){
-    for(let i=0;i<options.length;i++){
-        opcionesSelect[i].textContent=options[i];
+
+function idiomaeEuskera() {
+    tituloGral.textContent = " Hitz egin nahi?";
+    subtitulosContact.textContent = "Harremanetarako datuak";
+    pararafo.textContent = "Belategi, 1 48002 BILBO.";
+    phone.textContent = "Tel. Zenbakia";
+    subtitulosForm.textContent = "Bidaliguzu mezu bat";
+    interesEn.textContent = "Zein zerbitzuan interesa duzu?";
+    btnEnviar.textContent = 'Bidali';
+    idiomaOpciones()
+}
+
+
+function idiomaOpcionesEn() {
+    for (let i = 0; i < optionsEn.length; i++) {
+        opcionesSelect[i].textContent = optionsEn[i];
+    }
+};
+
+function idiomaOpcionesEu(){
+    for (let i = 0; i < optionsEu.length; i++) {
+        opcionesSelect[i].textContent = optionsEu[i];
     }
 }

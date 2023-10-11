@@ -1,19 +1,19 @@
-let idiomas=document.querySelectorAll(".nav-link");
-let vinculosHeader=document.querySelectorAll(".linkscript");
-let tituloGral=document.querySelector(".contact-title");
-let subtitulosContact=document.querySelector(".titulos-card_contacto");
-let pararafo=document.querySelector(".contact-paragraph");
+let idiomas = document.querySelectorAll(".nav-link");
+let vinculosHeader = document.querySelectorAll(".linkscript");
+let tituloGral = document.querySelector(".contact-title");
+let subtitulosContact = document.querySelector(".titulos-card_contacto");
+let pararafo = document.querySelector(".contact-paragraph");
 let subtitulosForm = document.querySelector(".title-card_mensaje");
-let interesEn=document.querySelector(".servicio-interés");
-let btnEnviar=document.querySelector("#btn-Form");
-let phone=document.querySelector(".phone");
-let opcionesSelect=document.querySelectorAll(".opciones");
-let mail=document.querySelector(".mail");
-let textoArea=document.getElementById("mensaje");
-let inputPlaceHolder=document.querySelectorAll(".input-deco");
-let espanol=document.querySelector(".es");
-let ingles=document.querySelector(".en");
-let euskera=document.querySelector(".eu");
+let interesEn = document.querySelector(".servicio-interés");
+let btnEnviar = document.querySelector("#btn-Form");
+let phone = document.querySelector(".phone");
+let opcionesSelect = document.querySelectorAll(".opciones");
+let mail = document.querySelector(".mail");
+let textoArea = document.getElementById("mensaje");
+let inputPlaceHolder = document.querySelectorAll(".input-deco");
+let espanol = document.querySelector(".es");
+let ingles = document.querySelector(".en");
+let euskera = document.querySelector(".eu");
 
 const encabezadoNav = {
 
@@ -36,11 +36,11 @@ const encabezadoNav = {
 }
 
 
-const inpPlacHoldEn=[
-    "Name *","SurName *","Phone *","Email *"
+const inpPlacHoldEn = [
+    "Name *", "SurName *", "Phone *", "Email *"
 ]
-const inpPlacHoldEu=[
-    "Name *","SurName *","Phone *","Email *"
+const inpPlacHoldEu = [
+    "Izena *", "Abizenak *", "Tel. zenbakia *", "Posta elek. *"
 ]
 
 const optionsEn = [
@@ -116,17 +116,17 @@ function headerEu() {
 }
 
 
-function idiomaIngles(){
-   tituloGral.textContent=" ¿WANT TO TALK?";
-   subtitulosContact.textContent="Contact details";
-   pararafo.textContent="Belategi, 1 48002 BILBO.";
-   phone.textContent="Phone";
-   subtitulosForm.textContent="Send us a message";
-   interesEn.textContent="What service are you interested in?";
-   btnEnviar.textContent='Send';
-   textoArea.placeholder="Message";
-  idiomaOpcionesEn()
-  holder()
+function idiomaIngles() {
+    tituloGral.textContent = " ¿WANT TO TALK?";
+    subtitulosContact.textContent = "Contact details";
+    pararafo.textContent = "Belategi, 1 48002 BILBO.";
+    phone.textContent = "Phone";
+    subtitulosForm.textContent = "Send us a message";
+    interesEn.textContent = "What service are you interested in?";
+    btnEnviar.textContent = 'Send';
+    textoArea.placeholder = "Tell us";
+    idiomaOpcionesEn()
+    holder()
 }
 
 
@@ -138,7 +138,9 @@ function idiomaeEuskera() {
     subtitulosForm.textContent = "Bidaliguzu mezu bat";
     interesEn.textContent = "Zein zerbitzuan interesa duzu?";
     btnEnviar.textContent = 'Bidali';
+    textoArea.placeholder = "Esaiguzu";
     idiomaOpcionesEu()
+    holderEu();
 }
 
 
@@ -148,13 +150,19 @@ function idiomaOpcionesEn() {
     }
 };
 
-function idiomaOpcionesEu(){
+function idiomaOpcionesEu() {
     for (let i = 0; i < optionsEu.length; i++) {
         opcionesSelect[i].textContent = optionsEu[i];
     }
 }
-function holder(){
-    for(let i=0;i<inpPlacHoldEn.length;i++){
-        inputPlaceHolder[i].placeholder=inpPlacHoldEn[i];
+function holder() {
+    for (let i = 0; i < inpPlacHoldEn.length; i++) {
+        inputPlaceHolder[i].placeholder = inpPlacHoldEn[i];
     }
 }
+
+function holderEu() {
+    for (let i = 0; i < inpPlacHoldEu.length; i++) {
+            inputPlaceHolder[i].placeholder = inpPlacHoldEu[i];
+        }
+    }
